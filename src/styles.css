@@ -1,1 +1,165 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --solid-background: #17B486;
+    --white: #FFF;
+    --grey-1: #EDEDED;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-light: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom-out 20s ease-out forwards;
+}
+
+@keyframes zoom-out {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+.container {
+    width: 400px;
+    height: 80vh;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.upper-part {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.lower-part {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-data {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.temperature {
+    font-size: 4em;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 900;
+}
+
+.more-info-label {
+    color: whitesmoke;
+}
+
+.more-info-container {
+    flex: 1;
+    background-color: var(--shadow-light);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-block {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-block-label {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-block-label img {
+    width: 2em;
+}
+
+.info-block-label span {
+    color: whitesmoke;
+    font-size: 0.8em;
+}
+
+.info-block-value {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.search {
+    position: relative;
+    margin-bottom: 1em;
+    text-align: center;
+    z-index: 1;
+}
+
+.search input {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--grey-1);
+    font-size: 0.8em;
+    text-align: center;
+}
