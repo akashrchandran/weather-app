@@ -1,6 +1,10 @@
-# Weatherapp
+# Weathe-rapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+A simple weather app to get realtime wather information of a city.
+
+![image](https://user-images.githubusercontent.com/78685510/221620518-fdd6af4a-2b19-4f22-b0e1-6db78d24072e.png)
+
+
 
 ## Development server
 
