@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   }
   cityName: string = '';
   weatherData?: WeatherData;
+  isDay = true;
   async ngOnInit() {
     this.ipaddressService.getIpaddress().pipe(
       concatMap((response) => {
@@ -39,6 +40,7 @@ export class AppComponent implements OnInit {
       .subscribe({
         next: (response) => {
           this.weatherData = response;
+          this.isDay = response.current.is_day === 1 ? true: false;
         }
       });
 

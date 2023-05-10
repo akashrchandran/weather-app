@@ -1,31 +1,22 @@
-<!-- <video autoplay loop muted id="video-background">
-  <source src="https://ik.imagekit.io/gyzvlawdz/Projects/weather_app/partlycloudy_qyEkhnKgr.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> -->
-<!-- <video autoplay loop muted id="video-background">
-  <source src="https://ik.imagekit.io/gyzvlawdz/Projects/weather_app/cloudy_dyhAk-2MO.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> -->
-<!-- <video autoplay loop muted id="video-background">
-  <source src="https://ik.imagekit.io/gyzvlawdz/Projects/weather_app/clear_fZUuu-4Mg.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> -->
-<!-- <video autoplay loop muted id="video-background">
-  <source src="https://ik.imagekit.io/gyzvlawdz/Projects/weather_app/cloudynight_had_1iW_8.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> -->
-<video autoplay loop muted id="video-background">
-  <source src="https://ik.imagekit.io/gyzvlawdz/Projects/weather_app/misty_MgiZhRHa5.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 <div class="search">
   <form #form="ngForm" (submit)="onSubmit()">
-    <input type="text" placeholder="Search city" name="city" [(ngModel)] = "cityName">
+  <div class="search-input">
+      <input type="text" placeholder="Search city" name="city" [(ngModel)]="cityName" required>
+    </div>
+    <div class="search-btn">
+      <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+      </button>
+    </div>
   </form>
 </div>
 
 <div class="container" *ngIf="weatherData">
   <div class="upper-part">
+    <img src="https://ik.imagekit.io/houseboats/Green_Landscape1-transformed.webp" alt="Day Image" *ngIf="isDay">
+    <img src="https://ik.imagekit.io/houseboats/7315395.webp" alt="Night image" *ngIf="!isDay">
     <div class="weather-data">
       <div class="location">{{ weatherData.location.name }}</div>
       <div class="temperature">{{ weatherData.current.temp_c | number: '1.0-0'}}°C</div>
@@ -80,59 +71,4 @@
     </div>
   </div>
 </div>
-
-<!-- <div class="container">
-  <div class="upper-part">
-    <div class="weather-data">
-      <div class="location">Kollam</div>
-      <div class="temperature">{{ 14.40 | number: '1.0-0'}}°C</div>
-    </div>
-  </div>
-  <div class="lower-part">
-    <div class="more-info-label">
-      More Information
-    </div>
-    <div class="more-info-container">
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/100/null/external-uv-index-weather-flaticons-lineal-color-flat-icons-2.png"/>
-          <span>uv</span>
-        </div>
-        <div class="info-block-value">
-          10
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="https://img.icons8.com/fluency/100/null/happy-cloud.png"/>
-          <span>cloud</span>
-        </div>
-        <div class="info-block-value">
-          20%
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="https://img.icons8.com/arcade/100/null/hygrometer.png"/>
-          <span>humidity</span>
-        </div>
-        <div class="info-block-value">
-          77%
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-wind-renewable-energy-flaticons-flat-flat-icons.png"/>
-          <span>wind</span>
-        </div>
-        <div class="info-block-value">
-          22 km/h
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <router-outlet></router-outlet>
