@@ -21,8 +21,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FF3CAC;
-    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
 }
 
 .container {
@@ -31,8 +32,7 @@ body {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 20px;
 }
 
 .upper-part {
@@ -143,6 +143,7 @@ body {
 .search {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     position: relative;
     margin-bottom: 1em;
