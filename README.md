@@ -1,6 +1,6 @@
-# Weathe-rapp
+# Weather-app
 
-A simple weather app to get realtime wather information of a city.
+A simple weather app to get realtime wather information of a city. It detects from where your from and display the current weather nearest to your location.
 
 ![image](https://user-images.githubusercontent.com/78685510/221620518-fdd6af4a-2b19-4f22-b0e1-6db78d24072e.png)
 
